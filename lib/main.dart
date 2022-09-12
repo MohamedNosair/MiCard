@@ -18,32 +18,75 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Row(
-           crossAxisAlignment: CrossAxisAlignment.stretch,
-            children:  <Widget>
-            [
-              Container(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CircleAvatar(
+                radius: 40.0,
+                backgroundImage: AssetImage('images/mohamed.jpg'),
+              ),
+              Text(
+                'mohamed nosair',
+                style: TextStyle(
+                    fontFamily: 'pacifico',
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
+              ),
+              Text(
+                'Flutter Developer',
+                style: TextStyle(
+                  fontFamily: 'Source Sans Pro',
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.teal.shade100,
+                  letterSpacing: 5.0,
+                ),
+              ),
+              SizedBox(
+                width: 100,
+                height: 20,
+                child: Divider(
+                  color: Colors.teal.shade100,
+                ),
+              ),
+              Card(
                 color: Colors.white,
-                width: 30,
-                child: Text(
-                  'Container 1',
+                margin: EdgeInsets.symmetric(horizontal: 25.0, vertical: 10.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.call,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    '+201277890731',
+                    style: TextStyle(
+                      color: Colors.teal.shade900,
+                      fontFamily: 'Source Sans Pro',
+                      fontSize: 20.0,
+                    ),
+                  ),
                 ),
               ),
-              Container(
-                color: Colors.red,
-                width: 30,
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(horizontal: 25.0, vertical: 10.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    'mohamednosair@gmail.com',
+                    style: TextStyle(
+                      color: Colors.teal.shade900,
+                      fontFamily: 'Source Sans Pro',
+                      fontSize: 18.0,
+                    ),
+                  ),
+                ),
+              ),
 
-                child: Text(
-                  'Container 2',
-                ),
-              ),
-              Container(
-                color: Colors.blue,
-                width: 30,
-                child: Text(
-                  'Container 3',
-                ),
-              ),
             ],
           ),
         ),
